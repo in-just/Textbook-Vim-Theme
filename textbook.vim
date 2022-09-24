@@ -69,9 +69,9 @@ if &background != s:background
    execute "set background=" . s:background
 endif
 
-" s:light_black
 call s:h("Cursor",        {"bg": s:counter_strike, "fg": s:norm })
-call s:h("Comment",       {"fg": s:bg_subtle, "gui": "italic"})
+" s:bg_subtle
+call s:h("Comment",       {"fg": s:norm, "gui": "italic"})
 
 call s:h("Constant",      {"fg": s:norm_subtle})
 hi! link Character        Constant
@@ -80,7 +80,7 @@ hi! link Boolean          Constant
 hi! link Float            Constant
 hi! link String           Constant
 
-call s:h("Identifier",     {"fg": s:fg, "cterm": "italic", "gui": "italic"})
+call s:h("Identifier",     {"fg": s:fg, "cterm": "NONE", "gui": "NONE"})
 hi! link Function         Identifier
 
 call s:h("Statement",     {"fg": s:fg, "cterm": "bold", "gui": "bold"})
@@ -98,7 +98,7 @@ hi! link Define           PreProc
 hi! link Macro            PreProc
 hi! link PreCondit        PreProc
 
-call s:h("Type",          {"fg": s:norm})
+call s:h("Type",          {"fg": s:norm, "gui":"bold"})
 hi! link StorageClass     Type
 hi! link Structure        Type
 hi! link Typedef          Type
