@@ -1,5 +1,4 @@
-" Name:       textbook.vim
-" Version:    0.1.0
+" Name:       textbook.vim " Version:    0.1.0
 " License:    Apache 2
 "
 " Minimal colorscheme based on Komau (github.com/ntk148v)
@@ -27,7 +26,8 @@ let s:pink            = {"gui": "#D73A49", "cterm": "167"}
 let s:green           = {"gui": "#22863A", "cterm": "29" }
 let s:red             = {"gui": "#B31D28", "cterm": "124"}
 let s:orange          = {"gui": "#E36209", "cterm": "166"}
-let s:blue            = {"gui": "#005CC5", "cterm": "26" }
+" #005CC5
+let s:blue            = {"gui": "#2F6895", "cterm": "26" }
 let s:counter_strike  = {"gui": "#2FFA2D", "cterm": "238"}
 
 let s:background = &background
@@ -73,7 +73,8 @@ call s:h("Cursor",        {"bg": s:counter_strike, "fg": s:norm })
 " s:bg_subtle
 call s:h("Comment",       {"fg": s:norm, "gui": "italic"})
 
-call s:h("Constant",      {"fg": s:norm_subtle})
+" s:norm_subtle
+call s:h("Constant",      {"fg": s:blue})
 hi! link Character        Constant
 hi! link Number           Constant
 hi! link Boolean          Constant
