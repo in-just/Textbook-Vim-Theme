@@ -1,6 +1,7 @@
 " Name:       textbook.vim " Version:    0.1.0
 " License:    Apache 2
-"
+" Author:     Justin Chou
+" GitHub:     (github.com/in-just)
 " Minimal colorscheme based on Komau (github.com/ntk148v)
 "
 """
@@ -21,14 +22,14 @@ let s:subtle_black    = {"gui": "#303030", "cterm": "236"}
 let s:light_gray      = {"gui": "#999999", "cterm": "246"}
 let s:lighter_gray    = {"gui": "#CCCCCC", "cterm": "252"}
 let s:lightest_gray   = {"gui": "#E5E5E5", "cterm": "254"}
-let s:yellow          = {"gui": "#FED442", "cterm": "221"}
+" FFFA00
+let s:yellow          = {"gui": "#F2EE0C", "cterm": "221"}
 let s:pink            = {"gui": "#D73A49", "cterm": "167"}
 let s:green           = {"gui": "#22863A", "cterm": "29" }
-let s:red             = {"gui": "#B31D28", "cterm": "124"}
+let s:red             = {"gui": "#DD2A2A", "cterm": "124"}
 let s:orange          = {"gui": "#E36209", "cterm": "166"}
-" #005CC5
 let s:blue            = {"gui": "#2F6895", "cterm": "26" }
-let s:counter_strike  = {"gui": "#2FFA2D", "cterm": "238"}
+let s:counter_strike  = {"gui": "#2FFA2D", "cterm": "181"}
 
 let s:background = &background
 
@@ -70,10 +71,8 @@ if &background != s:background
 endif
 
 call s:h("Cursor",        {"bg": s:counter_strike, "fg": s:norm })
-" s:bg_subtle
 call s:h("Comment",       {"fg": s:norm, "gui": "italic"})
 
-" s:norm_subtle
 call s:h("Constant",      {"fg": s:blue})
 hi! link Character        Constant
 hi! link Number           Constant
@@ -104,7 +103,7 @@ hi! link StorageClass     Type
 hi! link Structure        Type
 hi! link Typedef          Type
 
-call s:h("Special",       {"fg": s:norm_subtle, "gui": "italic"})
+call s:h("Special",       {"fg": s:norm_subtle, "gui": "NONE"})
 hi! link SpecialChar      Special
 hi! link Tag              Special
 hi! link Delimiter        Special
@@ -119,8 +118,12 @@ call s:h("SpecialKey",    {"fg": s:green})
 call s:h("NonText",       {"fg": s:medium_gray})
 call s:h("Directory",     {"fg": s:norm, "gui": "bold", "cterm": "bold"})
 call s:h("ErrorMsg",      {"fg": s:red})
-call s:h("IncSearch",     {"bg": s:norm_subtle, "fg": s:bg})
-call s:h("Search",        {"bg": s:norm, "fg": s:bg, "cterm": "bold", "gui": "bold"})
+" "fg":s:norm_subtle
+" MINE "fg":s:fg
+call s:h("IncSearch",     {"bg": s:yellow})
+"s:norm
+"MINE "fg": s:fg,
+call s:h("Search",        {"bg": s:yellow, "cterm": "bold", "gui": "bold"})
 call s:h("MoreMsg",       {"fg": s:medium_gray, "cterm": "bold", "gui": "bold"})
 hi! link ModeMsg MoreMsg
 call s:h("LineNr",        {"fg": s:bg_subtle})
@@ -166,7 +169,7 @@ call s:h("CursorColumn",  {"bg": s:bg_very_subtle})
 call s:h("CursorLine",    {"bg": s:bg_very_subtle})
 call s:h("ColorColumn",   {"bg": s:bg_subtle})
 
-call s:h("MatchParen",    {"bg": s:bg_subtle, "fg": s:norm})
+call s:h("MatchParen",    {"bg": s:bg_subtle, "fg": s:norm, "gui":"italic"})
 call s:h("qfLineNr",      {"fg": s:medium_gray})
 
 call s:h("htmlH1",        {"bg": s:bg, "fg": s:norm})
