@@ -8,3 +8,6 @@ komau.vim
 komau.vim~
 textbook.vim~
 .textbook.vim.swp
+*.un~
+previous.txt
+previous.txt~
