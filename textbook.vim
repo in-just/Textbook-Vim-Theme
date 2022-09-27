@@ -119,14 +119,13 @@ call s:h("NonText",       {"fg": s:medium_gray})
 call s:h("Directory",     {"fg": s:norm, "gui": "bold", "cterm": "bold"})
 call s:h("ErrorMsg",      {"fg": s:red})
 " "fg":s:norm_subtle
-" MINE "fg":s:fg
 call s:h("IncSearch",     {"bg": s:yellow})
 "s:norm
-"MINE "fg": s:fg,
 call s:h("Search",        {"bg": s:yellow, "cterm": "bold", "gui": "bold"})
 call s:h("MoreMsg",       {"fg": s:medium_gray, "cterm": "bold", "gui": "bold"})
 hi! link ModeMsg MoreMsg
 call s:h("LineNr",        {"fg": s:bg_subtle})
+" s:bg_very_subtle
 call s:h("CursorLineNr",  {"fg": s:cursorlinenr, "bg": s:bg_very_subtle, "cterm": "bold", "gui": "bold"})
 call s:h("Question",      {"fg": s:red})
 call s:h("StatusLine",    {"bg": s:bg_very_subtle})
@@ -167,9 +166,10 @@ call s:h("TabLineSel",    {"fg": s:subtle_black, "bg": s:pink, "gui": "bold", "c
 call s:h("TabLineFill",   {"fg": s:norm, "bg": s:bg_very_subtle})
 call s:h("CursorColumn",  {"bg": s:bg_very_subtle})
 call s:h("CursorLine",    {"bg": s:bg_very_subtle})
-call s:h("ColorColumn",   {"bg": s:bg_subtle})
+call s:h("ColorColumn",   {"bg": s:bg_very_subtle})
 
-call s:h("MatchParen",    {"bg": s:bg_subtle, "fg": s:norm, "gui":"italic"})
+" "bg": s: bg, s:bg_subtle
+call s:h("MatchParen",    {"bg": s:bg_very_subtle, "fg": s:norm, "gui":"italic"})
 call s:h("qfLineNr",      {"fg": s:medium_gray})
 
 call s:h("htmlH1",        {"bg": s:bg, "fg": s:norm})
