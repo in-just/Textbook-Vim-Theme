@@ -16,8 +16,6 @@ set guioptions -=r
 
 set cursorline
 
-set autoread
-
 " Vim with all enhancements
 source $VIMRUNTIME/vimrc_example.vim
 
