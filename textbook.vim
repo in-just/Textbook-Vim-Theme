@@ -71,9 +71,9 @@ if &background != s:background
 endif
 
 call s:h("Cursor",        {"bg": s:counter_strike, "fg": s:norm })
-call s:h("Comment",       {"fg": s:norm, "gui": "italic"})
+call s:h("Comment",       {"fg": s:norm, "gui": "NONE"})
 
-call s:h("Constant",      {"fg": s:blue})
+call s:h("Constant",      {"fg": s:norm})
 hi! link Character        Constant
 hi! link Number           Constant
 hi! link Boolean          Constant
@@ -83,14 +83,14 @@ hi! link String           Constant
 call s:h("Identifier",     {"fg": s:fg, "cterm": "NONE", "gui": "NONE"})
 hi! link Function         Identifier
 
-call s:h("Statement",     {"fg": s:fg, "cterm": "bold", "gui": "bold"})
+call s:h("Statement",     {"fg": s:fg, "cterm": "NONE", "gui": "NONE"})
 hi! link Conditonal       Statement
 hi! link Repeat           Statement
 hi! link Label            Statement
 hi! link Keyword          Statement
 hi! link Exception        Statement
 
-call s:h("Operator",      {"fg": s:norm, "cterm": "bold", "gui": "bold"})
+call s:h("Operator",      {"fg": s:norm, "cterm": "bold", "gui": "NONE"})
 
 call s:h("PreProc",       {"fg": s:norm_subtle})
 hi! link Include          PreProc
@@ -98,7 +98,7 @@ hi! link Define           PreProc
 hi! link Macro            PreProc
 hi! link PreCondit        PreProc
 
-call s:h("Type",          {"fg": s:norm, "gui":"bold"})
+call s:h("Type",          {"fg": s:norm, "gui":"NONE"})
 hi! link StorageClass     Type
 hi! link Structure        Type
 hi! link Typedef          Type
@@ -119,9 +119,9 @@ call s:h("NonText",       {"fg": s:medium_gray})
 call s:h("Directory",     {"fg": s:norm, "gui": "bold", "cterm": "bold"})
 call s:h("ErrorMsg",      {"fg": s:red})
 " "fg":s:norm_subtle
-call s:h("IncSearch",     {"bg": s:yellow})
+call s:h("IncSearch",     {"bg": s:bg_subtle})
 "s:norm
-call s:h("Search",        {"bg": s:yellow, "cterm": "bold", "gui": "bold"})
+call s:h("Search",        {"bg": s:bg_subtle, "cterm": "bold", "gui": "bold"})
 call s:h("MoreMsg",       {"fg": s:medium_gray, "cterm": "bold", "gui": "bold"})
 hi! link ModeMsg MoreMsg
 call s:h("LineNr",        {"fg": s:bg_subtle})
