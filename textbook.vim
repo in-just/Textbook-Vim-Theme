@@ -22,7 +22,6 @@ let s:subtle_black    = {"gui": "#303030", "cterm": "236"}
 let s:light_gray      = {"gui": "#999999", "cterm": "246"}
 let s:lighter_gray    = {"gui": "#CCCCCC", "cterm": "252"}
 let s:lightest_gray   = {"gui": "#E5E5E5", "cterm": "254"}
-" FFFA00
 let s:yellow          = {"gui": "#F2EE0C", "cterm": "221"}
 let s:pink            = {"gui": "#D73A49", "cterm": "167"}
 let s:green           = {"gui": "#22863A", "cterm": "29" }
@@ -51,7 +50,6 @@ else
   let s:cursorlinenr    = s:black
 endif
 
-" https://github.com/noahfrederick/vim-hemisu/
 function! s:h(group, style)
   execute "highlight" a:group
     \ "guifg="   (has_key(a:style, "fg")    ? a:style.fg.gui   : "NONE")
@@ -71,14 +69,14 @@ if &background != s:background
 endif
 
 call s:h("Cursor",        {"bg": s:counter_strike, "fg": s:norm })
-call s:h("Comment",       {"fg": s:norm, "gui": "NONE"})
+call s:h("Comment",       {"fg": s:medium_gray, "gui": "NONE"})
 
-call s:h("Constant",      {"fg": s:norm})
-hi! link Character        Constant
-hi! link Number           Constant
-hi! link Boolean          Constant
-hi! link Float            Constant
-hi! link String           Constant
+call s:h("Constant",      {"fg": s:blue})
+hi link Character        Constant
+hi link Number           Constant
+hi link Boolean          Constant
+hi link Float            Constant
+hi link String           Constant
 
 call s:h("Identifier",     {"fg": s:fg, "cterm": "NONE", "gui": "NONE"})
 hi! link Function         Identifier
@@ -103,7 +101,7 @@ hi! link StorageClass     Type
 hi! link Structure        Type
 hi! link Typedef          Type
 
-call s:h("Special",       {"fg": s:norm_subtle, "gui": "NONE"})
+call s:h("Special",       {"fg": s:medium_gray, "gui": "NONE"})
 hi! link SpecialChar      Special
 hi! link Tag              Special
 hi! link Delimiter        Special
@@ -113,19 +111,16 @@ hi! link Debug            Special
 call s:h("Underlined",    {"fg": s:norm, "gui": "underline", "cterm": "underline"})
 call s:h("Ignore",        {"fg": s:bg})
 call s:h("Error",         {"fg": s:white, "bg": s:red, "cterm": "bold"})
-call s:h("Todo",          {"fg": s:pink, "gui": "underline", "cterm": "underline"})
-call s:h("SpecialKey",    {"fg": s:green})
+call s:h("Todo",          {"fg": s:pink, "gui": "NONE", "cterm": "underline"})
+call s:h("SpecialKey",    {"fg": s:red})
 call s:h("NonText",       {"fg": s:medium_gray})
 call s:h("Directory",     {"fg": s:norm, "gui": "bold", "cterm": "bold"})
 call s:h("ErrorMsg",      {"fg": s:red})
-" "fg":s:norm_subtle
 call s:h("IncSearch",     {"bg": s:bg_subtle})
-"s:norm
 call s:h("Search",        {"bg": s:bg_subtle, "cterm": "bold", "gui": "bold"})
 call s:h("MoreMsg",       {"fg": s:medium_gray, "cterm": "bold", "gui": "bold"})
 hi! link ModeMsg MoreMsg
 call s:h("LineNr",        {"fg": s:bg_subtle})
-" s:bg_very_subtle
 call s:h("CursorLineNr",  {"fg": s:cursorlinenr, "bg": s:bg_very_subtle, "cterm": "bold", "gui": "bold"})
 call s:h("Question",      {"fg": s:red})
 call s:h("StatusLine",    {"bg": s:bg_very_subtle})
@@ -168,7 +163,6 @@ call s:h("CursorColumn",  {"bg": s:bg_very_subtle})
 call s:h("CursorLine",    {"bg": s:bg_very_subtle})
 call s:h("ColorColumn",   {"bg": s:bg_very_subtle})
 
-" "bg": s: bg, s:bg_subtle
 call s:h("MatchParen",    {"bg": s:bg_very_subtle, "fg": s:norm, "gui":"italic"})
 call s:h("qfLineNr",      {"fg": s:medium_gray})
 
