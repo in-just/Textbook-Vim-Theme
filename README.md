@@ -10,3 +10,8 @@ Since I use this theme everyday you can expect it to be updated regularly. If yo
 ![C++ Pong Vim theme demo](https://raw.githubusercontent.com/in-just/Textbook-Vim-Theme/master/screenz/version%202%20screenshot.PNG)
 
 Originally forked from Komau https://github.com/ntk148v/komau.vim
+
+
+## Archived
+I have archived this repo. I work primarily in the Linux Terminal with Vim or Visual Studio on Windows 10 and use the default themes. 
+This was a fun project.
